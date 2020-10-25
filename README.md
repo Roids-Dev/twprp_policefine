@@ -6,4 +6,4 @@
 - Add twprp_police fine to your resources folder
 - Add `ensure twprp_policefine` to your server.cfg
 - Anyone with the job `police` will be able to use the /fine command
-- Syntax: /fine PLAYER-ID FINE-AMMOUNT
+- Syntax: `/fine PLAYER-ID FINE-AMMOUNT`
