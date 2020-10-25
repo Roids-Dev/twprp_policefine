@@ -1,3 +1,6 @@
+----- Made by Roids#9757 for The Wack Pack RP - RedM Project -----
+
+
 
 
 RegisterCommand("fine", function(source, args)
@@ -13,3 +16,5 @@ AddEventHandler('twprp:notacop', function()
 	local _source = source
 	TriggerEvent("vorp:Tip", "Only lawmen can do that. You are not a lawman!", 5000)
 	end)
+
+

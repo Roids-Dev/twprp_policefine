@@ -1,3 +1,8 @@
+----- Made by Roids#9757 for The Wack Pack RP - RedM Project -----
+
+
+
+
 local VorpCore = {}
 
 TriggerEvent("getCore",function(core)
