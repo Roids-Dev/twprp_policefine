@@ -24,7 +24,7 @@ AddEventHandler("twprp:fine", function(criminal, fine)
 	local Character = VorpCore.getUser(_source).getUsedCharacter
     local job = Character.job
     if job == 'police' then
-			print('cop working')
+			--print('cop working')
 			TriggerClientEvent("vorp:Tip", _criminal, 'You have been fined $'.._fine, 5000)
 			VORP.removeMoney(_criminal, 0, _fine)
 			Citizen.Wait(5500)
@@ -32,7 +32,7 @@ AddEventHandler("twprp:fine", function(criminal, fine)
 		end
 		if job ~= 'police' then
 			TriggerClientEvent("vorp:Tip", _source, "Only lawmen can do that. You are not a lawman!", 5000)
-				print('Not a cop working')
+				--print('Not a cop working')
 		end
 	end)
 end)
