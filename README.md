@@ -3,7 +3,7 @@
  
  HOW TO USE:
  
-- Add twprp_police fine to your resources folder
+- Add `twprp_police` fine to your resources folder
 - Add `ensure twprp_policefine` to your server.cfg
 - Anyone with the job `police` will be able to use the `/fine` command
 - Command Syntax: `/fine PLAYER-ID FINE-AMMOUNT`
