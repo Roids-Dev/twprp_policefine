@@ -22,8 +22,8 @@ AddEventHandler("twprp:fine", function(criminal, fine)
 	TriggerEvent("vorp:getCharacter",_criminal,function(user)
 
 	local Character = VorpCore.getUser(_source).getUsedCharacter
-    local job = Character.job
-    if job == 'police' then
+    	local job = Character.job
+        if job == 'police' then
 			--print('cop working')
 			TriggerClientEvent("vorp:Tip", _criminal, 'You have been fined $'.._fine, 5000)
 			VORP.removeMoney(_criminal, 0, _fine)
