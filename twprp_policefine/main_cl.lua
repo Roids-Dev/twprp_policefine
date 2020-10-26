@@ -11,10 +11,8 @@ RegisterCommand("fine", function(source, args)
 end)
 
 
---RegisterNetEvent('twprp:notacop')
---AddEventHandler('twprp:notacop', function()
---	local _source = source
---	TriggerEvent("vorp:Tip", "Only lawmen can do that. You are not a lawman!", 5000)
---	end)
-
-
+RegisterNetEvent('twprp:notacop')
+AddEventHandler('twprp:notacop', function()
+	local _source = source
+	TriggerEvent("vorp:Tip", "Only lawmen can do that. You are not a lawman!", 5000)
+	end)
