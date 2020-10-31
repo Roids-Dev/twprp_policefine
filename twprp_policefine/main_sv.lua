@@ -1,8 +1,7 @@
 ----- Made by Roids#9757 for The Wack Pack RP - RedM Project -----
-
-
-
-
+--------------------------------------
+---- VORP Stuff don't touch ----
+--------------------------------------
 local VorpCore = {}
 
 TriggerEvent("getCore",function(core)
@@ -10,17 +9,14 @@ TriggerEvent("getCore",function(core)
 end)
 
 VORP = exports.vorp_core:vorpAPI()
-
-
+--------------------------------------
+-- Don't touch this shit either lol --
+--------------------------------------
 RegisterServerEvent("twprp:fine")
 AddEventHandler("twprp:fine", function(criminal, fine)
 	local _source = source
 	local _criminal = criminal
 	local _fine = fine
-	--local User = VorpCore.getUser(_criminal)
-	--local Character = User.getUsedCharacter
-	
-
 	local Character = VorpCore.getUser(_source).getUsedCharacter
 	local Receiver = VorpCore.getUser(_criminal).getUsedCharacter
     local job = Character.job
@@ -36,7 +32,7 @@ AddEventHandler("twprp:fine", function(criminal, fine)
 		TriggerClientEvent("vorp:TipBottom", _source, "Only lawmen can do that. You are not a lawman!", 5000)
 			--print('Not a cop working')
 	end
-	
 end)
-
-
+--------------------------------------
+----- Now was that so hard? LOL ------
+--------------------------------------
