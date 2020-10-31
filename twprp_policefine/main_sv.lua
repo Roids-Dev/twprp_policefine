@@ -1,6 +1,6 @@
------ Made by Roids#9757 for The Wack Pack RP - RedM Project -----
+---- Made by Roids#9757 for TWPRP ----
 --------------------------------------
----- VORP Stuff don't touch ----
+------- VORP Stuff don't touch -------
 --------------------------------------
 local VorpCore = {}
 
@@ -19,8 +19,8 @@ AddEventHandler("twprp:fine", function(criminal, fine)
 	local _fine = fine
 	local Character = VorpCore.getUser(_source).getUsedCharacter
 	local Receiver = VorpCore.getUser(_criminal).getUsedCharacter
-    local job = Character.job
-    if job == 'police' then
+    	local job = Character.job
+    		if job == 'police' then
 			--print('cop working')
 		TriggerClientEvent("vorp:TipBottom", _criminal, 'You have been Fined $'.._fine, 5000)
 		TriggerClientEvent("vorp:TipBottom", _source , Receiver.firstname..' '..Receiver.lastname..' has been Fined $'.._fine, 5000)
