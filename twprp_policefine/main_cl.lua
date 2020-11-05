@@ -1,7 +1,9 @@
------ Made by Roids#9757 for The Wack Pack RP - RedM Project -----
+----------------------------------------------
+
+   ----- Made by Roids#9757 for TWPRP -----   
 
 ----------------------------------------------
--- I mean you don't NEED to touch this lol --
+-- FINE --
 ----------------------------------------------
 RegisterCommand("fine", function(source, args)
 	local _source = source
@@ -10,5 +12,18 @@ RegisterCommand("fine", function(source, args)
     TriggerServerEvent("twprp:fine", criminal, fine)
 end)
 ----------------------------------------------
---- Imma be real idk what to put here lmao ---
+--- /FINE ---
+----------------------------------------------
+----------------------------------------------
+--- JAIL ---
+----------------------------------------------
+RegisterCommand("jail", function(source, args)
+	local _source = source
+	local criminal = args[1]
+	local jail = args[2]
+	local time = args[3]
+    TriggerServerEvent("twprp:jail", criminal, jail, time)
+end)
+----------------------------------------------
+--- /JAIL ---
 ----------------------------------------------
