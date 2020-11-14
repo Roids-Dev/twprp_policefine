@@ -22,16 +22,13 @@ AddEventHandler("twprp:fine", function(criminal, fine)
 	local Receiver = VorpCore.getUser(_criminal).getUsedCharacter
     	local job = Character.job
     		if job == 'police' then
-			--print('cop working')
 		TriggerClientEvent("vorp:TipBottom", _criminal, 'You have been Fined $'.._fine, 5000)
 		TriggerClientEvent("vorp:TipBottom", _source , Receiver.firstname..' '..Receiver.lastname..' has been Fined $'.._fine, 5000)
-		--TriggerClientEvent("vorp:TipBottom", _source, 'You have Fined $'.._fine, 5000)
-		VORP.removeMoney(_criminal, 0, _fine)
+		Receiver.removeCurrency(0, _fine)
 		Citizen.Wait(2000)
 	end
 	if job ~= 'police' then
 		TriggerClientEvent("vorp:TipBottom", _source, "Only lawmen can do that. You are not a lawman!", 5000)
-			--print('Not a cop working')
 	end
 end)
 --------------------------------------
@@ -47,16 +44,12 @@ AddEventHandler("twprp:jail", function(criminal, jail, time)
 	local Receiver = VorpCore.getUser(_criminal).getUsedCharacter
     	local job = Character.job
     		if job == 'police' then
-			--print('cop working')
 		TriggerClientEvent("vorp:TipBottom", _criminal, 'You have been sentenced to '..time..' minutes!', 5000)
 		TriggerClientEvent("vorp:TipBottom", _source , Receiver.firstname..' '..Receiver.lastname..' has been sentenced to '.._time..' minutes', 5000)
-		--TriggerClientEvent("vorp:TipBottom", _source, 'You have Fined $'.._fine, 5000)
-		--VORP.removeMoney(_criminal, 0, _fine)
 		TriggerClientEvent('twprp:jail', _criminal, _jail, _time)
 		Citizen.Wait(2000)
 	end
 	if job ~= 'police' then
 		TriggerClientEvent("vorp:TipBottom", _source, "Only lawmen can do that. You are not a lawman!", 5000)
-			--print('Not a cop working')
 	end
 end)
