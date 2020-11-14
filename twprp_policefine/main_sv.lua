@@ -39,7 +39,7 @@ AddEventHandler("twprp:jail", function(criminal, jail, time)
 	local _source = source
 	local _criminal = criminal
 	local _jail = jail
-	local _time = time
+	local _time = ((time*60)*1000)
 	local Character = VorpCore.getUser(_source).getUsedCharacter
 	local Receiver = VorpCore.getUser(_criminal).getUsedCharacter
     	local job = Character.job

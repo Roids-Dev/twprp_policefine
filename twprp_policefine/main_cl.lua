@@ -37,15 +37,16 @@ end)
 RegisterNetEvent('twprp:jail')
 AddEventHandler('twprp:jail', function(jail, time)
 	local playerPed = PlayerPedId()
+	local _time = ((time/1000)/60)
 	if jail == 1 then
 		SetEntityCoords(playerPed, valcell1[1], valcell1[2], valcell1[3], 0, 0, 0, 0)
 		Citizen.Wait(time)
 		SetEntityCoords(playerPed, valRelease[1], valRelease[2], valRelease[3], 0, 0, 0, 0)
-		TriggerEvent("vorp:TipBottom", 'You have been released after '..time..' minutes!', 5000)
+		TriggerEvent("vorp:TipBottom", 'You have been released after '.._time..' minutes!', 5000)
 	elseif jail == 2 then
 		SetEntityCoords(playerPed, valcell2[1], valcell2[2], valcell2[3], 0, 0, 0, 0)
 		Citizen.Wait(time)
 		SetEntityCoords(playerPed, valRelease[1], valRelease[2], valRelease[3], 0, 0, 0, 0)
-		TriggerEvent("vorp:TipBottom", 'You have been released after '..time..' minutes!', 5000)
+		TriggerEvent("vorp:TipBottom", 'You have been released after '.._time..' minutes!', 5000)
 	end
 end)
