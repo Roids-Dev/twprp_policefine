@@ -10,5 +10,4 @@
 
 # Notes
 
-- This script also has a `/jail` command however it does not work in its current state. It is missing the coords so if you want it to work then you need to add that yoursef(until i add it that is). They can be found at the top of `main_cl.lua`
-- If you don't plan on using the jail command just comment out the coords in `main_cl.lua`
+- I ended up removing the jail command. It was poorly done and just meh in general lol
